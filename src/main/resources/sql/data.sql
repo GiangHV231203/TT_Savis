@@ -93,7 +93,16 @@ CREATE TABLE SanPham(
                         ma_mauSac		BIGINT
                             REFERENCES MauSac(MauMauSac),
                         ma_nhaSanXuat		BIGINT
-                            REFERENCES NhaSanXuat(MaNSX)
+                            REFERENCES NhaSanXuat(MaNSX),
+                        ma_loaiSanPham		BIGINT
+                            REFERENCES LoaiSp(MaLoaiSp)
+)
+GO
+CREATE TABLE LoaiSp(
+                       MaLoaiSp			BIGINT
+                           IDENTITY(1,1) PRIMARY KEY,
+                       Ten			NVARCHAR(50),
+                       MoTa		NVARCHAR(50)
 )
 GO
 CREATE TABLE LoaiDe(
@@ -134,6 +143,8 @@ CREATE TABLE HoaDon(
 GO
 
 CREATE TABLE HoaDonChiTiet(
+                              MaHoaDonChiTiet	BIGINT
+                                  IDENTITY(1,1) PRIMARY KEY,
                               MaHoaDon	BIGINT
                                   REFERENCES HoaDon(MaHoaDon),
                               MaSanPham	BIGINT
@@ -142,9 +153,7 @@ CREATE TABLE HoaDonChiTiet(
                               DonGia		MONEY,
 
                               GhiChu		NVARCHAR(MAX),
-                              TrangThai	INT,
-
-                              PRIMARY KEY (MaHoaDon, MaSanPham)
+                              TrangThai	INT
 )
 GO
 
@@ -187,6 +196,8 @@ CREATE TABLE GioHang(
 GO
 
 CREATE TABLE GioHangChiTiet(
+                               MaGioHangChiTiet	UNIQUEIDENTIFIER
+                                   DEFAULT NEWID() PRIMARY KEY,
                                MaGioHang	UNIQUEIDENTIFIER
                                    REFERENCES GioHang(MaGioHang),
                                MaSanPham	BIGINT
@@ -195,9 +206,7 @@ CREATE TABLE GioHangChiTiet(
                                SoLuong		INT,
 
                                GhiChu		NVARCHAR(MAX),
-                               TrangThai	INT,
-
-                               PRIMARY KEY (MaGioHang, MaSanPham)
+                               TrangThai	INT
 )
 GO
 
@@ -216,13 +225,13 @@ CREATE TABLE DanhSachYeuThich(
 GO
 
 CREATE TABLE YeuThichChiTiet(
+                                MaYeuThichChiTiet	UNIQUEIDENTIFIER
+                                    DEFAULT NEWID() PRIMARY KEY,
                                 MaDanhSach	UNIQUEIDENTIFIER
                                     REFERENCES DanhSachYeuThich(MaDanhSach),
                                 MaSanPham	BIGINT
                                     REFERENCES SanPham(MaSanPham),
 
                                 GhiChu		NVARCHAR(MAX),
-                                TrangThai	INT,
-
-                                PRIMARY KEY (MaDanhSach, MaSanPham)
+                                TrangThai	INT
 )
