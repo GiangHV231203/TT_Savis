@@ -24,7 +24,7 @@ import java.sql.Date;
 public class PhieuGiamGia {
     @Id
     @Column(name = "MaPhieu")
-    private String maThe;
+    private String maPhieu;
 
     @Column(name = "TenPhieu")
     private String tenPhieu;
