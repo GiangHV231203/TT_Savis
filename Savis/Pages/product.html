@@ -1,0 +1,57 @@
+<div class="table">
+  <div class="table-header">
+    <p>Product List Table</p>
+    <div>
+      <input class="sea" placeholder="Search..." />
+      <a href="#addProduct" class="add"><button>+</button></a>
+    </div>
+  </div>
+  <div class="table-section">
+    <table>
+      <thead>
+        <tr>
+          <th>Mã sản phẩm</th>
+          <th>Tên sản phẩm</th>
+          <th>Chất liệu</th>
+          <th>Giá</th>
+          <th>Số lượng tồn</th>
+          <th>Mã đế</th>
+          <th>Mã màu</th>
+          <th>Mã nhà sản xuất</th>
+          <th>Mô tả</th>
+          <th>Trạng thái</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="sp in lstProducts">
+        <tr>
+          <td>{{sp.maprod}}</td>
+          <td>{{sp.name}}</td>
+          <td>{{sp.chatlieu}}</td>
+          <td>{{sp.gia}}</td>
+          <td>{{sp.soluongton}}</td>
+          <td>{{sp.made}}</td>
+          <td>{{sp.mamau}}</td>
+          <td>{{sp.mansx}}</td>
+          <td>{{sp.mota}}</td>
+          <td>{{sp.status}}</td>
+          <td class="action">
+            <a href="#detailProduct/{{sp.id}}" class="boxicon">
+              <i class="bx bx-show"></i
+            ></a>
+            <a
+              href="#editProduct/{{sp.id}}"
+              ng-click="update(sp.id)"
+              class="boxicon"
+            >
+              <i class="bx bx-detail"></i
+            ></a>
+            <a href="" class="boxicon" ng-click="delete(sp.id)">
+              <i class="bx bx-trash"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

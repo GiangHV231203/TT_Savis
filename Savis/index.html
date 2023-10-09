@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FE - Savis</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/Css/sidebar.css" />
+    <link rel="stylesheet" href="/Css/crudAll.css" />
+    <link rel="stylesheet" href="/Css/main.css" />
+    <!-- Boxicons CDN Link -->
+    <!-- <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    /> -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body ng-app="myApp">
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bxl-netlify icon"></i>
+        <div class="logo_name">Savis</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder="Search..." />
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-home-alt"></i>
+            <span class="links_name">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="#product">
+            <i class="bx bxl-product-hunt"></i>
+            <span class="links_name">Product</span>
+          </a>
+          <span class="tooltip">Product</span>
+        </li>
+        <li>
+          <a href="#voucher">
+            <i class="bx bxs-discount"></i>
+            <span class="links_name">Voucher</span>
+          </a>
+          <span class="tooltip">Voucher</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-bar-chart-square"></i>
+            <span class="links_name">Statistical</span>
+          </a>
+          <span class="tooltip">Statistical</span>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Setting</span>
+          </a>
+          <span class="tooltip">Setting</span>
+        </li>
+        <li>
+          <a href="/Pages/login.html">
+            <i class="bx bx-log-out"></i>
+            <span class="links_name">Logout</span>
+          </a>
+          <span class="tooltip">Logout</span>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div class="home" ng-view></div>
+    </section>
+
+    <script>
+      //Module
+      var app = angular.module("myApp", ["ngRoute"]);
+      app.config(function ($routeProvider, $locationProvider) {
+        $locationProvider.hashPrefix("");
+        $routeProvider
+          .when("/product", {
+            templateUrl: "Pages/product.html",
+            controller: ProdController,
+          })
+          .when("/addProduct", {
+            templateUrl: "Pages/addProduct.html",
+            controller: addController,
+          })
+          .when("/detailProduct/:id", {
+            templateUrl: "Pages/detailProduct.html",
+            controller: detailController,
+          })
+          .when("/editProduct/:id", {
+            templateUrl: "Pages/editProduct.html",
+            controller: detailController,
+          })
+          .when("/voucher", {
+            templateUrl: "Pages/voucher.html",
+            controller: VoucherController,
+          })
+          .when("/addVoucher", {
+            templateUrl: "Pages/addVoucher.html",
+            controller: addVoucherController,
+          })
+          .when("/detailVoucher/:id", {
+            templateUrl: "Pages/detailVoucher.html",
+            controller: detailVoucherController,
+          })
+          .when("/editVoucher/:id", {
+            templateUrl: "Pages/editVoucher.html",
+            controller: detailVoucherController,
+          })
+          .when("/login", {
+            templateUrl: "Pages/login.html",
+            controller: loginController,
+          })
+          .when("/register", {
+            templateUrl: "Pages/register.html",
+            controller: registerController,
+          });
+        // .otherwise({
+        //   redirectTo: "/product",
+        // });
+      });
+    </script>
+    <script src="/Js/sidebar.js"></script>
+    <script src="/Js/addProduct.js"></script>
+    <script src="/Js/editProduct.js"></script>
+    <script src="/Js/product.js"></script>
+    <script src="/Js/addVoucher.js"></script>
+    <script src="/Js/editVoucher.js"></script>
+    <script src="/Js/voucher.js"></script>
+    <script src="/Js/login.js"></script>
+    <script src="/Js/register.js"></script>
+  </body>
+</html>

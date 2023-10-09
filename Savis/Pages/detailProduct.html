@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="title">
+    Detail Product
+    <a href="#product" class="back">
+      <i class="bx bx-arrow-back bx-rotate-180" style="font-size: 18px"></i>
+    </a>
+  </div>
+  <div class="content">
+    <form>
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Mã sản phẩm</span>
+          <input
+            type="text"
+            placeholder="Mã sản phẩm"
+            ng-model="maprod"
+            readonly
+          />
+        </div>
+        <div class="input-box">
+          <span class="details">Tên sản phẩm</span>
+          <input
+            type="text"
+            placeholder="Tên sản phẩm"
+            ng-model="name"
+            readonly
+          />
+        </div>
+        <div class="input-box">
+          <span class="details">Chất liệu</span>
+          <input
+            type="text"
+            placeholder="Chất liệu"
+            ng-model="chatlieu"
+            readonly
+          />
+        </div>
+        <div class="input-box">
+          <span class="details">Giá</span>
+          <input type="number" placeholder="Giá" ng-model="gia" readonly />
+        </div>
+        <div class="input-box">
+          <span class="details">Số lượng tồn</span>
+          <input
+            type="number"
+            placeholder="Số lượng tồn"
+            ng-model="soluongton"
+            readonly
+          />
+        </div>
+        <div class="input-box">
+          <span class="details">Mã đế</span>
+          <input type="text" placeholder="Mã đế" ng-model="made" readonly />
+        </div>
+        <div class="input-box">
+          <span class="details">Mã màu</span>
+          <input type="text" placeholder="Mã màu" ng-model="mamau" readonly />
+        </div>
+        <div class="input-box">
+          <span class="details">Mã nhà sản xuất</span>
+          <input
+            type="text"
+            placeholder="Mã nhà sản xuất"
+            ng-model="mansx"
+            readonly
+          />
+        </div>
+        <div class="input-box">
+          <span class="details">Mô tả</span>
+          <input type="text" placeholder="Mô tả" ng-model="mota" readonly />
+        </div>
+      </div>
+      <div class="gender-details">
+        <input type="radio" name="gender" id="dot-1" />
+        <input type="radio" name="gender" id="dot-2" />
+        <input type="radio" name="gender" id="dot-3" />
+        <span class="gender-title">Trạng thái</span>
+        <div class="category" ng-model="status">
+          <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Còn hàng</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Hết hàng</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Ngừng bán</span>
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

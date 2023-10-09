@@ -1,0 +1,53 @@
+<div class="table">
+  <div class="table-header">
+    <p>Voucher List Table</p>
+    <div>
+      <input class="sea" placeholder="Search..." />
+      <a href="#addVoucher" class="add"><button>+</button></a>
+    </div>
+  </div>
+  <div class="table-section">
+    <table>
+      <thead>
+        <tr>
+          <th>Mã phiếu</th>
+          <th>Tên phiếu</th>
+          <th>Ngày bắt đầu</th>
+          <th>Ngày kết thúc</th>
+          <th>Giá trị giảm</th>
+          <th>Giá trị giảm tối đa</th>
+          <th>Hình thức giảm</th>
+          <th>Trạng thái</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="vc in lstVoucher">
+        <tr>
+          <td>{{vc.maVoucher}}</td>
+          <td>{{vc.tenVoucher}}</td>
+          <td>{{vc.batdau}}</td>
+          <td>{{vc.ketthuc}}</td>
+          <td>{{vc.giatrigiam}}%</td>
+          <td>{{vc.giamtoida}}%</td>
+          <td>{{vc.hinhthuc}}</td>
+          <td>{{vc.trangthai}}</td>
+          <td>
+            <a href="#detailVoucher/{{vc.id}}" class="boxicon">
+              <i class="bx bx-show"></i
+            ></a>
+            <a
+              href="#editVoucher/{{vc.id}}"
+              ng-click="update(vc.id)"
+              class="boxicon"
+            >
+              <i class="bx bx-detail"></i
+            ></a>
+            <a href="" class="boxicon" ng-click="delete(vc.id)">
+              <i class="bx bx-trash"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
