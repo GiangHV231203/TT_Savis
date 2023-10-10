@@ -13,6 +13,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.sql.Date;
 import java.util.UUID;
@@ -30,9 +31,11 @@ public class DanhSachYeuThich {
     private UUID maDanhSach;
 
     @Column(name = "NgayTao")
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
     private Date ngayTao;
 
     @Column(name = "NgayCapNhap")
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
     private Date ngayCapNhap;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -43,5 +46,5 @@ public class DanhSachYeuThich {
     private String ghiChu;
 
     @Column(name = "TrangThai")
-    private int trangThai;
+    private Integer trangThai;
 }
