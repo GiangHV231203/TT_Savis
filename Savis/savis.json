@@ -1,0 +1,121 @@
+{
+  "userAccounts": [
+    {
+      "id": 1,
+      "username": "Hmmm",
+      "email": "abc@gmail.com",
+      "password": "12345",
+      "passwordConfirm": "12345"
+    }
+  ],
+  "products": [
+    {
+      "id": 2,
+      "maprod": "aloo",
+      "name": "2",
+      "chatlieu": "2",
+      "gia": 2,
+      "soluongton": 2,
+      "made": "2",
+      "mamau": "2",
+      "mansx": "2",
+      "mota": "abc",
+      "status": ""
+    },
+    {
+      "maprod": "3",
+      "name": "3",
+      "chatlieu": "3",
+      "gia": 10,
+      "soluongton": 3,
+      "made": "3",
+      "mamau": "3",
+      "mansx": "3",
+      "mota": "3",
+      "id": 3
+    },
+    {
+      "maprod": "4",
+      "name": "4",
+      "chatlieu": "4",
+      "gia": 4,
+      "soluongton": 4,
+      "made": "4",
+      "mamau": "4",
+      "mansx": "4",
+      "mota": "4",
+      "id": 4
+    },
+    {
+      "maprod": "5",
+      "name": "5",
+      "chatlieu": "5",
+      "gia": 5,
+      "soluongton": 5,
+      "made": "5",
+      "mamau": "5",
+      "mansx": "5",
+      "mota": "5",
+      "id": 5
+    },
+    {
+      "maprod": "8",
+      "name": "8",
+      "chatlieu": "8",
+      "gia": 8,
+      "soluongton": 8,
+      "made": "8",
+      "mamau": "8",
+      "mansx": "8",
+      "mota": "88",
+      "id": 6
+    },
+    {
+      "maprod": "1",
+      "name": "1",
+      "chatlieu": "1",
+      "gia": 1,
+      "soluongton": 1,
+      "made": "1",
+      "mamau": "1",
+      "mansx": "1",
+      "mota": "1",
+      "id": 7
+    }
+  ],
+  "vouchers": [
+    {
+      "maVoucher": "1",
+      "tenVoucher": "1",
+      "batdau": "2023-10-10T03:10:00.000Z",
+      "ketthuc": "2023-10-16T03:10:00.000Z",
+      "giatrigiam": 1,
+      "giamtoida": 1,
+      "hinhthuc": "1",
+      "id": 2
+    }
+  ],
+  "shoeSoles": [
+    {
+      "id": 1,
+      "made": "1",
+      "ten": "abc",
+      "mota": "12345"
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "mamau": "1",
+      "tenmau": "xyz"
+    }
+  ],
+  "suppliers": [
+    {
+      "id": 1,
+      "mansx": "11",
+      "tennsx": "aaa",
+      "trangthai": ""
+    }
+  ]
+}

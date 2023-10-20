@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="title">
+    Edit Shoe Soles
+    <a href="#shoeSoles" class="back">
+      <i class="bx bx-arrow-back bx-rotate-180" style="font-size: 18px"></i>
+    </a>
+  </div>
+  <div class="content">
+    <form>
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Mã đế</span>
+          <input type="text" placeholder="Mã đế" ng-model="made" />
+        </div>
+        <div class="input-box">
+          <span class="details">Tên đế</span>
+          <input type="text" placeholder="Tên đế" ng-model="ten" />
+        </div>
+        <div class="input-box">
+          <span class="details">Mô tả</span>
+          <input type="text" placeholder="Mô tả" ng-model="mota" />
+        </div>
+      </div>
+      <div class="button">
+        <input type="submit" value="Edit" ng-click="update()" />
+      </div>
+    </form>
+  </div>
+</div>

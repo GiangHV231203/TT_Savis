@@ -1,0 +1,43 @@
+<div class="table">
+  <div class="table-header">
+    <p>Supplier List Table</p>
+    <div>
+      <input class="sea" placeholder="Search..." />
+      <a href="#addNsx" class="add"><button>+</button></a>
+    </div>
+  </div>
+  <div class="table-section">
+    <table>
+      <thead>
+        <tr>
+          <th>Mã NSX</th>
+          <th>Tên NSX</th>
+          <th>Trạng thái</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="nsx in lstNsx">
+        <tr>
+          <td>{{nsx.mansx}}</td>
+          <td>{{nsx.tennsx}}</td>
+          <td>{{nsx.trangthai}}</td>
+          <td>
+            <a href="#detailNsx/{{nsx.id}}" class="boxicon">
+              <i class="bx bx-show"></i
+            ></a>
+            <a
+              href="#editNsx/{{nsx.id}}"
+              ng-click="update(nsx.id)"
+              class="boxicon"
+            >
+              <i class="bx bx-edit"></i
+            ></a>
+            <a href="" class="boxicon" ng-click="delete(nsx.id)">
+              <i class="bx bx-trash"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

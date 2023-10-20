@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="title">
+    Edit Color
+    <a href="#color" class="back">
+      <i class="bx bx-arrow-back bx-rotate-180" style="font-size: 18px"></i>
+    </a>
+  </div>
+  <div class="content">
+    <form>
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Mã màu</span>
+          <input type="text" placeholder="Mã màu" ng-model="mamau" />
+        </div>
+        <div class="input-box">
+          <span class="details">Tên màu</span>
+          <input type="text" placeholder="Tên màu" ng-model="tenmau" />
+        </div>
+      </div>
+      <div class="button">
+        <input type="submit" value="Edit" ng-click="update()" />
+      </div>
+    </form>
+  </div>
+</div>

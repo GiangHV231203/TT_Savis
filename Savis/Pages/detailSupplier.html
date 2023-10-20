@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="title">
+    Detail Supplier
+    <a href="#supplier" class="back">
+      <i class="bx bx-arrow-back bx-rotate-180" style="font-size: 18px"></i>
+    </a>
+  </div>
+  <div class="content">
+    <form>
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Mã NSX</span>
+          <input type="text" placeholder="Mã NSX" ng-model="mansx" readonly />
+        </div>
+        <div class="input-box">
+          <span class="details">Tên NSX</span>
+          <input type="text" placeholder="Tên NSX" ng-model="tennsx" readonly />
+        </div>
+      </div>
+      <div class="gender-details" ng-model="status">
+        <input
+          type="radio"
+          name="gender"
+          id="dot-1"
+          ng-model="status"
+          readonly
+        />
+        <input
+          type="radio"
+          name="gender"
+          id="dot-2"
+          ng-model="status"
+          readonly
+        />
+        <span class="gender-title">Trạng thái</span>
+        <div class="category">
+          <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Hoạt động</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Ngừng hoạt động</span>
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="title">
+    Edit Voucher
+    <a href="#voucher" class="back">
+      <i class="bx bx-arrow-back bx-rotate-180" style="font-size: 18px"></i>
+    </a>
+  </div>
+  <div class="content">
+    <form action="#">
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Mã phiếu</span>
+          <input type="text" placeholder="Mã phiếu" ng-model="maVoucher" />
+        </div>
+        <div class="input-box">
+          <span class="details">Tên phiếu</span>
+          <input type="text" placeholder="Tên phiếu" ng-model="tenVoucher" />
+        </div>
+        <div class="input-box">
+          <span class="details">Ngày bắt đầu</span>
+          <input
+            type="datetime-local"
+            placeholder="Ngày bắt đầu"
+            ng-model="batdau"
+          />
+        </div>
+        <div class="input-box">
+          <span class="details">Ngày kết thúc</span>
+          <input
+            type="datetime-local"
+            placeholder="Ngày kết thúc"
+            ng-model="ketthuc"
+          />
+        </div>
+        <div class="input-box">
+          <span class="details">Giá trị giảm</span>
+          <input
+            type="number"
+            placeholder="Giá trị giảm"
+            ng-model="giatrigiam"
+          />
+        </div>
+        <div class="input-box">
+          <span class="details">Giá trị giảm tối đa</span>
+          <input
+            type="number"
+            placeholder="Giá trị giảm tối đa"
+            ng-model="giamtoida"
+          />
+        </div>
+        <div class="input-box">
+          <span class="details">Hình thức giảm</span>
+          <input type="text" placeholder="Hình thức giảm" ng-model="hinhthuc" />
+        </div>
+      </div>
+      <div class="gender-details">
+        <input type="radio" name="gender" id="dot-1" />
+        <input type="radio" name="gender" id="dot-2" />
+        <span class="gender-title">Trạng thái</span>
+        <div class="category" ng-model="trangthai">
+          <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Còn hiệu lực</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Hết hiệu lực</span>
+          </label>
+        </div>
+      </div>
+      <div class="button">
+        <input type="submit" value="Edit" ng-click="update()" />
+      </div>
+    </form>
+  </div>
+</div>

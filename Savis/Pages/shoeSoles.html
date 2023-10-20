@@ -1,0 +1,43 @@
+<div class="table">
+  <div class="table-header">
+    <p>Shoe Soles List Table</p>
+    <div>
+      <input class="sea" placeholder="Search..." />
+      <a href="#addShoeSoles" class="add"><button>+</button></a>
+    </div>
+  </div>
+  <div class="table-section">
+    <table>
+      <thead>
+        <tr>
+          <th>Mã đế</th>
+          <th>Tên</th>
+          <th>Mô tả</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="ss in lstShoeSoles">
+        <tr>
+          <td>{{ss.made}}</td>
+          <td>{{ss.ten}}</td>
+          <td>{{ss.mota}}</td>
+          <td>
+            <a href="#detailShoeSoles/{{ss.id}}" class="boxicon">
+              <i class="bx bx-show"></i
+            ></a>
+            <a
+              href="#editShoeSoles/{{ss.id}}"
+              ng-click="update(ss.id)"
+              class="boxicon"
+            >
+              <i class="bx bx-edit"></i
+            ></a>
+            <a href="" class="boxicon" ng-click="delete(ss.id)">
+              <i class="bx bx-trash"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="table">
+  <div class="table-header">
+    <p>Client List Table</p>
+    <div>
+      <input class="sea" placeholder="Search..." />
+    </div>
+  </div>
+  <div class="table-section">
+    <table>
+      <thead>
+        <tr>
+          <th>Ảnh</th>
+          <th>Mã khách hàng</th>
+          <th>Tên khách hàng</th>
+          <th>Ngày sinh</th>
+          <th>Giới tính</th>
+          <th>SDT</th>
+          <th>Số CMT/CCCD</th>
+          <th>Email</th>
+          <th>Địa chỉ</th>
+          <th>Trạng thái</th>
+          <th>Điểm tích lũy</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="clt in lstClient">
+        <tr>
+          <td>{{clt.makh}}</td>
+          <td>{{clt.tenkh}}</td>
+          <td>{{clt.ngaysinh}}</td>
+          <td>{{clt.gioitinh}}</td>
+          <td>{{clt.sdt}}</td>
+          <td>{{clt.cmt_cccd}}</td>
+          <td>{{clt.email}}</td>
+          <td>{{clt.diachi}}</td>
+          <td>{{clt.trangthai}}</td>
+          <td>{{clt.diem}}</td>
+          <td>
+            <a href="#detailClient/{{clt.id}}" class="boxicon">
+              <i class="bx bx-show"></i
+            ></a>
+            <a
+              href="#editClient/{{clt.id}}"
+              ng-click="update(clt.id)"
+              class="boxicon"
+            >
+              <i class="bx bx-edit"></i
+            ></a>
+            <a href="" class="boxicon" ng-click="delete(clt.id)">
+              <i class="bx bx-trash"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

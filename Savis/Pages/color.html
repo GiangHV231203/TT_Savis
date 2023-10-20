@@ -1,0 +1,41 @@
+<div class="table">
+  <div class="table-header">
+    <p>Color List Table</p>
+    <div>
+      <input class="sea" placeholder="Search..." />
+      <a href="#addColor" class="add"><button>+</button></a>
+    </div>
+  </div>
+  <div class="table-section">
+    <table>
+      <thead>
+        <tr>
+          <th>Mã màu</th>
+          <th>Tên màu</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="cl in lstColor">
+        <tr>
+          <td>{{cl.mamau}}</td>
+          <td>{{cl.tenmau}}</td>
+          <td>
+            <a href="#detailColor/{{cl.id}}" class="boxicon">
+              <i class="bx bx-show"></i
+            ></a>
+            <a
+              href="#editColor/{{cl.id}}"
+              ng-click="update(cl.id)"
+              class="boxicon"
+            >
+              <i class="bx bx-edit"></i
+            ></a>
+            <a href="" class="boxicon" ng-click="delete(cl.id)">
+              <i class="bx bx-trash"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
