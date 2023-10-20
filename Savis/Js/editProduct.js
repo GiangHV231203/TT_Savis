@@ -29,7 +29,7 @@ window.detailController = function ($scope, $http, $routeParams) {
       })
       .then(function (response) {
         if (response.status === 200) {
-          alert("Sửa sản phẩm thành công");
+          alert("Sửa thành công");
         }
       });
     history.back();

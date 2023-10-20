@@ -50,6 +50,13 @@
           <span class="tooltip">Home</span>
         </li>
         <li>
+          <a href="#client">
+            <i class="bx bx-user-circle"></i>
+            <span class="links_name">Client</span>
+          </a>
+          <span class="tooltip">Client</span>
+        </li>
+        <li>
           <a href="#product">
             <i class="bx bxl-product-hunt"></i>
             <span class="links_name">Product</span>
@@ -62,6 +69,27 @@
             <span class="links_name">Voucher</span>
           </a>
           <span class="tooltip">Voucher</span>
+        </li>
+        <li>
+          <a href="#shoeSoles">
+            <i class="fa-solid fa-shoe-prints"></i>
+            <span class="links_name">Shoe Soles</span>
+          </a>
+          <span class="tooltip">Shoe soles</span>
+        </li>
+        <li>
+          <a href="#color">
+            <i class="bx bxs-color"></i>
+            <span class="links_name">Color</span>
+          </a>
+          <span class="tooltip">Color</span>
+        </li>
+        <li>
+          <a href="#supplier">
+            <i class="fa-solid fa-truck-field"></i>
+            <span class="links_name">Supplier</span>
+          </a>
+          <span class="tooltip">Supplier</span>
         </li>
         <li>
           <a href="#">
@@ -129,6 +157,55 @@
             templateUrl: "Pages/editVoucher.html",
             controller: detailVoucherController,
           })
+          .when("/shoeSoles", {
+            templateUrl: "Pages/shoeSoles.html",
+            controller: ShoeSolesController,
+          })
+          .when("/addShoeSoles", {
+            templateUrl: "Pages/addShoeSoles.html",
+            controller: addShoeSolesController,
+          })
+          .when("/detailShoeSoles/:id", {
+            templateUrl: "Pages/detailShoeSoles.html",
+            controller: detailShoeSolesController,
+          })
+          .when("/editShoeSoles/:id", {
+            templateUrl: "Pages/editShoeSoles.html",
+            controller: detailShoeSolesController,
+          })
+          .when("/color", {
+            templateUrl: "Pages/color.html",
+            controller: ColorController,
+          })
+          .when("/addColor", {
+            templateUrl: "Pages/addColor.html",
+            controller: addColorController,
+          })
+          .when("/detailColor/:id", {
+            templateUrl: "Pages/detailColor.html",
+            controller: detailColorController,
+          })
+          .when("/editColor/:id", {
+            templateUrl: "Pages/editColor.html",
+            controller: detailColorController,
+          })
+          //
+          .when("/supplier", {
+            templateUrl: "Pages/supplier.html",
+            controller: SupplierController,
+          })
+          .when("/addSupplier", {
+            templateUrl: "Pages/addSupplier.html",
+            controller: addSupplierController,
+          })
+          .when("/detailSupplier/:id", {
+            templateUrl: "Pages/detailSupplier.html",
+            controller: detailSupplierController,
+          })
+          .when("/editSupplier/:id", {
+            templateUrl: "Pages/editSupplier.html",
+            controller: detailSupplierController,
+          })
           .when("/login", {
             templateUrl: "Pages/login.html",
             controller: loginController,
@@ -149,6 +226,15 @@
     <script src="/Js/addVoucher.js"></script>
     <script src="/Js/editVoucher.js"></script>
     <script src="/Js/voucher.js"></script>
+    <script src="/Js/addShoeSoles.js"></script>
+    <script src="/Js/editShoeSoles.js"></script>
+    <script src="/Js/shoeSoles.js"></script>
+    <script src="/Js/addColor.js"></script>
+    <script src="/Js/editColor.js"></script>
+    <script src="/Js/color.js"></script>
+    <script src="/Js/addSupplier.js"></script>
+    <script src="/Js/editSupplier.js"></script>
+    <script src="/Js/supplier.js"></script>
     <script src="/Js/login.js"></script>
     <script src="/Js/register.js"></script>
   </body>

@@ -20,7 +20,7 @@
       "mamau": "2",
       "mansx": "2",
       "mota": "abc",
-      "status": true
+      "status": ""
     },
     {
       "maprod": "3",
@@ -93,6 +93,29 @@
       "giamtoida": 1,
       "hinhthuc": "1",
       "id": 2
+    }
+  ],
+  "shoeSoles": [
+    {
+      "id": 1,
+      "made": "1",
+      "ten": "abc",
+      "mota": "12345"
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "mamau": "1",
+      "tenmau": "xyz"
+    }
+  ],
+  "suppliers": [
+    {
+      "id": 1,
+      "mansx": "11",
+      "tennsx": "aaa",
+      "trangthai": ""
     }
   ]
 }
